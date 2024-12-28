@@ -42,6 +42,7 @@ http
     if(["jpg", "png", "gif", "svg"].includes(file.ext)) {
       // headers["Access-Control-Allow-Origin"] = "https://developer.mozilla.org";
       headers["Access-Control-Allow-Origin"] = "http://localhost:8000";
+      headers["Set-Cookie"] = "mycookie=test";
       // headers["Access-Control-Allow-Origin"] = "https://localhost:8000";
     }
     res.writeHead(statusCode, headers);
