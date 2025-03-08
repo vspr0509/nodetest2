@@ -18,7 +18,10 @@
 <h1>cors below</h1>
     <img src="https://nodetest-la3e.onrender.com/cors-test.jpg" crossorigin="use-credentials"  />
 
-<h1>mixed iframe here</h1>
+<h1>mixed iframe here(Will be blocked)</h1>
 <iframe src="http://example.com/" height="400px" width="400px" />
+
+<h1>mixed image here(wont be blocked even when served over http)</h1>
+<img src="http://sneaindia.com/images/img03.jpg" />
   </body>
 </html>
