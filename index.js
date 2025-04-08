@@ -39,7 +39,9 @@ http
     const statusCode = file.found ? 200 : 404;
     const mimeType = MIME_TYPES[file.ext] || MIME_TYPES.default;
     const headers = { "Content-Type": mimeType };
-    
+    if(mimeType.indexOf("img") > -1) {
+      headers["content-disposition"] = "attachment";
+}
       // headers["Access-Control-Allow-Origin"] = "https://developer.mozilla.org";
       // headers["Access-Control-Allow-Origin"] = "http://localhost:8000";
       headers["Access-Control-Allow-Origin"] = "https://nodetest-la3e.onrender.com";
